@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hamburguer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="principal-header">
+            <h1>Teste</h1>
+            <span id="menu" onclick="clickMenu()"><img id="menuzin" onclick="trocar()" src="menu1.png" alt="menu"></span>
+        </div>
+        <div id="options">
+            <ul>
+                <li><a href="">LINK</a></li>
+                <li><a href="">LINK</a></li>
+                <li><a href="">LINK</a></li>
+                <li><a href="">LINK</a></li>
+            </ul>
+        </div>
+    </header>
+    <h2>Apenas teste do menu Hamburguer</h2>
+</body>
+</html>
+<!-- SCRIPT MENU -->
+<script>
+    var currentImgIndex=1;
+    var ImgSrcArray = ['menu1.png','menu2.png' ];
+
+        function clickMenu() {
+            if (options.style.display == 'block') {
+                options.style.display = 'none'
+                barra.style.display = 'block' 
+            } else {
+                options.style.display = 'block'
+                barra.style.display = 'none'
+            } 
+        }
+
+        function trocar() {
+            if(currentImgIndex == ImgSrcArray.length) {
+                currentImgIndex=0;
+             }
+            document.getElementById("menuzin").src=ImgSrcArray[currentImgIndex]; 
+            currentImgIndex++;
+        }
+    </script>

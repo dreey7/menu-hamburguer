@@ -1,0 +1,67 @@
+
+/* CONFIGURAÇÕES PADRÃO */
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+
+/* HEADER */
+header {
+    width: 100%;
+}
+
+#principal-header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+#principal-header #menu {
+    cursor: pointer;
+    user-select: none;
+}
+
+#options {
+    display: none;
+    background-color: rgb(245, 241, 241);
+    animation: para-baixo 0.2s;
+}
+
+#options ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#options a {
+    color: black;
+}
+
+#options a:hover {
+    text-decoration: underline;
+}
+
+@keyframes para-baixo {
+    0% {
+        transform: translateY(-7px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
